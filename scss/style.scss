@@ -1,6 +1,11 @@
 //COMMON VARIABLES
 $dark-theme-color: #1c1c1c;
 $accent-theme-color: #4caf50;
+$accent-theme-color1: #00BD9D;
+$accent-theme-color2: #832161;
+$accent-theme-color3: #FE9000;
+$accent-theme-color4: #D72638;
+$accent-theme-color5: #FC448D;
 $light-theme-color: #fff;
 
 //MIXINS
@@ -88,6 +93,79 @@ h1 {
     i {
       color: $accent-theme-color;
       margin-right: 5px;
+    }
+  }
+}
+
+h2 {
+  margin-top: 40px;  
+  
+  text-decoration: underline;
+}
+
+.demo-btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.demo-btn {
+  @include transition-mix;
+  
+  padding: 8px 15px;
+  
+  background-color: transparent;
+  outline: none;
+  border: 2px solid currentColor;
+  border-radius: 5px;
+  
+  cursor: pointer;
+  
+  &:nth-child(1) {
+    color: $accent-theme-color1;
+  }
+  
+  &:nth-child(2) {
+    color: $accent-theme-color2;
+  }
+  
+  &:nth-child(3) {
+    color: $accent-theme-color3;
+  }
+  
+  &:nth-child(4) {
+    color: $accent-theme-color4;
+  }
+  
+  &:nth-child(5) {
+    color: $accent-theme-color5;
+  }
+  
+  &:hover {
+    color: $light-theme-color;
+    
+    &:nth-child(1) {
+      background-color: $accent-theme-color1;
+      border-color: $accent-theme-color1;
+    }
+
+    &:nth-child(2) {
+      background-color: $accent-theme-color2;
+      border-color: $accent-theme-color2;
+    }
+
+    &:nth-child(3) {
+      background-color: $accent-theme-color3;
+      border-color: $accent-theme-color3;
+    }
+
+    &:nth-child(4) {
+      background-color: $accent-theme-color4;
+      border-color: $accent-theme-color4;
+    }
+
+    &:nth-child(5) {
+      background-color: $accent-theme-color5;
+      border-color: $accent-theme-color5;
     }
   }
 }
