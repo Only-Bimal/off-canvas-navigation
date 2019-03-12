@@ -4,7 +4,7 @@ mixin nav-item (navLinkText, navLinkIcon)
   //navigation item
   li.nav__item
   
-    //nav link
+    //navigation link
     a.nav__link(href="#" title= navLinkText)
       i.nav__link-icon.material-icons= navLinkIcon
       = navLinkText
@@ -15,6 +15,9 @@ mixin nav-item (navLinkText, navLinkIcon)
 
   //navigation
   nav.nav
+  
+    //close icon
+    .nav__close
       
     //navigation list
     ul.nav__list

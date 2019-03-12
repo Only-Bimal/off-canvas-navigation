@@ -146,7 +146,7 @@ body {
 /* nav list styles */
 .nav__list {
   padding: 0;
-  margin: 0;
+  margin: 45px 0 0 0;
   list-style-type: none;
 }
 
@@ -177,4 +177,44 @@ body {
   /* !!!use only with material design icons */
   margin-right: 10px;
   color: currentColor;
+}
+
+/* close icon styles */
+.nav__close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 40px;
+  height: 25px;
+  cursor: pointer;
+  /* close icon elements */
+  /* hover effect */
+}
+.nav__close:before, .nav__close:after {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  display: block;
+  width: 4px;
+  height: 28px;
+  border-radius: 10px;
+  content: '';
+  transform-origin: center center;
+  background-color: #fff;
+}
+.nav__close:before {
+  position: absolute;
+  top: 0;
+  left: 18px;
+  transform: rotate(-45deg);
+}
+.nav__close:after {
+  position: absolute;
+  top: 0;
+  right: 18px;
+  transform: rotate(45deg);
+}
+.nav__close:hover:before, .nav__close:hover:after {
+  background-color: #4caf50;
 }
