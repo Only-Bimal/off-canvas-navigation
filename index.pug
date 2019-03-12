@@ -6,28 +6,25 @@ mixin nav-item (navLinkText, navLinkIcon)
   
     //nav link
     a.nav__link(href="#" title= navLinkText)
-      i(class="material-icons")= navLinkIcon
+      i.nav__link-icon.material-icons= navLinkIcon
       = navLinkText
 
 
 //page block includes a navigation and a content block 
 .page
 
-  //navigation part
-  .page__navigation
-  
-    //navigation
-    nav.nav
+  //navigation
+  nav.nav
       
-      //navigation list
-      ul.nav__list
+    //navigation list
+    ul.nav__list
       
-        +nav-item('Home', 'home')
-        +nav-item('About', 'equalizer')
-        +nav-item('Tour', 'business_center')
-        +nav-item('Settings', 'settings')
-        +nav-item('Plans', 'grade')
-        +nav-item('Log In', 'perm_identity')
+      +nav-item('Home', 'home')
+      +nav-item('About', 'equalizer')
+      +nav-item('Tour', 'business_center')
+      +nav-item('Settings', 'settings')
+      +nav-item('Plans', 'grade')
+      +nav-item('Log In', 'perm_identity')
   
   //content part
   .page__content

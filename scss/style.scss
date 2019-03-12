@@ -184,3 +184,70 @@ body {
 .page {
   position: relative;
 }
+
+/* navigation styles */
+$nav-width: 300px;
+$nav-bg: $dark-theme-color;
+$nav-padding: 30px;
+
+$nav-item-offset-vert: 20px;
+
+$nav-icon-offset-horz: 10px;
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  
+  width: $nav-width;
+  padding: $nav-padding;
+  box-sizing: border-box;
+  
+  background-color: $nav-bg;
+  box-shadow: 4px 0 5px 0 rgba(0,0,0,0.14), 
+              1px 0 10px 0 rgba(0,0,0,0.12), 
+              2px 0 4px -1px rgba(0,0,0,0.3);
+}
+
+/* nav list styles */
+.nav__list {
+  padding: 0;
+  margin: 0;
+  
+  list-style-type: none;
+}
+
+/* nav item styles */
+.nav__item {
+  
+  &:not(:last-child) {
+    margin-bottom: $nav-item-offset-vert;
+  }
+}
+
+/* nav link styles */
+.nav__link {
+  @include transition-mix;
+  
+  display: inline-flex;
+  align-items: center;
+  
+  color: $light-theme-color;
+  text-decoration: none;
+  
+  &:hover {
+    color: $accent-theme-color;
+  }
+}
+
+/* nav link icon styles */
+.nav__link-icon {
+  position: relative;
+  top: - 3px; /* !!!use only with material design icons */
+  
+  margin-right: $nav-icon-offset-horz;
+  
+  color: currentColor;
+}
+

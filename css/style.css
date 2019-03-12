@@ -129,3 +129,52 @@ body {
 .page {
   position: relative;
 }
+
+/* navigation styles */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  padding: 30px;
+  box-sizing: border-box;
+  background-color: #1c1c1c;
+  box-shadow: 4px 0 5px 0 rgba(0, 0, 0, 0.14), 1px 0 10px 0 rgba(0, 0, 0, 0.12), 2px 0 4px -1px rgba(0, 0, 0, 0.3);
+}
+
+/* nav list styles */
+.nav__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+/* nav item styles */
+.nav__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+/* nav link styles */
+.nav__link {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  display: inline-flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+}
+.nav__link:hover {
+  color: #4caf50;
+}
+
+/* nav link icon styles */
+.nav__link-icon {
+  position: relative;
+  top: -3px;
+  /* !!!use only with material design icons */
+  margin-right: 10px;
+  color: currentColor;
+}
