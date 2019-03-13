@@ -421,7 +421,6 @@ $nav-list-offset-vert: 30px;
     
   /* opened styles */
   &.js-opened {
-    @include transition-mix();
     
     left: 0;  
   }
@@ -434,5 +433,46 @@ $nav-list-offset-vert: 30px;
   
   &.js-opened {
      transform: translate3d(100px, 0, -600px) rotateY(- 20deg);
+  }
+}
+
+/* Demo #4: styles */
+
+.nav--offcanvas-4 {
+  @include transition-mix($duration: 0s);
+  
+  max-height: 80%;
+  
+  transform: rotateY(-75deg) translateX(-50px);
+  transform-origin: left center;
+  
+  opacity: 0;
+  visibility: hidden;
+  
+  /* opened styles */
+  &.js-opened {
+    max-height: 100%;
+    
+    transition:
+      transform .22s linear 0s,
+      opacity .22s linear 0s,
+      visibility .22s linear 0s;
+    
+    transform: rotateY(0) translateX(0);
+    transform-origin: left center;
+    
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.page__content--offcanvas-4 {
+  @include transition-mix();
+  
+  left: 0;
+  
+  /* opened styles */
+  &.js-opened {
+    left: $nav-width;
   }
 }

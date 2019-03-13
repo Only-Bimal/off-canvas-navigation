@@ -133,7 +133,8 @@ body {
 
 .page {
   min-height: 100vh;
-  perspective: 1500px;
+  -webkit-perspective: 1500px;
+          perspective: 1500px;
   background-color: rgba(28, 28, 28, 0.5);
 }
 
@@ -214,20 +215,23 @@ body {
   height: 28px;
   border-radius: 10px;
   content: '';
-  transform-origin: center center;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
   background-color: #fff;
 }
 .nav__close:before {
   position: absolute;
   top: 0;
   left: 18px;
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 .nav__close:after {
   position: absolute;
   top: 0;
   right: 18px;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 .nav__close:hover:before, .nav__close:hover:after {
   background-color: #4caf50;
@@ -329,10 +333,12 @@ body {
   transition-duration: 0.2s;
   transition-timing-function: linear;
   transition-delay: 0s;
-  transform: scale(1) translateX(0);
+  -webkit-transform: scale(1) translateX(0);
+          transform: scale(1) translateX(0);
 }
 .page__content--offcanvas-2.js-opened {
-  transform: scale(0.8) translateX(150px);
+  -webkit-transform: scale(0.8) translateX(150px);
+          transform: scale(0.8) translateX(150px);
 }
 
 /* Demo #3: styles */
@@ -345,10 +351,6 @@ body {
   /* opened styles */
 }
 .nav--offcanvas-3.js-opened {
-  transition-property: all;
-  transition-duration: 0.2s;
-  transition-timing-function: linear;
-  transition-delay: 0s;
   left: 0;
 }
 
@@ -357,8 +359,50 @@ body {
   transition-duration: 0.2s;
   transition-timing-function: linear;
   transition-delay: 0s;
-  transform: rotateY(0deg) translateX(0);
+  -webkit-transform: rotateY(0deg) translateX(0);
+          transform: rotateY(0deg) translateX(0);
 }
 .page__content--offcanvas-3.js-opened {
-  transform: translate3d(100px, 0, -600px) rotateY(-20deg);
+  -webkit-transform: translate3d(100px, 0, -600px) rotateY(-20deg);
+          transform: translate3d(100px, 0, -600px) rotateY(-20deg);
+}
+
+/* Demo #4: styles */
+.nav--offcanvas-4 {
+  transition-property: all;
+  transition-duration: 0s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  max-height: 80%;
+  -webkit-transform: rotateY(-75deg) translateX(-50px);
+          transform: rotateY(-75deg) translateX(-50px);
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+  opacity: 0;
+  visibility: hidden;
+  /* opened styles */
+}
+.nav--offcanvas-4.js-opened {
+  max-height: 100%;
+  transition: opacity .22s linear 0s, visibility .22s linear 0s, -webkit-transform .22s linear 0s;
+  transition: transform .22s linear 0s, opacity .22s linear 0s, visibility .22s linear 0s;
+  transition: transform .22s linear 0s, opacity .22s linear 0s, visibility .22s linear 0s, -webkit-transform .22s linear 0s;
+  -webkit-transform: rotateY(0) translateX(0);
+          transform: rotateY(0) translateX(0);
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+  opacity: 1;
+  visibility: visible;
+}
+
+.page__content--offcanvas-4 {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  left: 0;
+  /* opened styles */
+}
+.page__content--offcanvas-4.js-opened {
+  left: 300px;
 }
