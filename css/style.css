@@ -133,6 +133,7 @@ body {
 
 .page {
   min-height: 100vh;
+  perspective: 1500px;
   background-color: rgba(28, 28, 28, 0.5);
 }
 
@@ -309,7 +310,7 @@ body {
 /* Demo #2: styles */
 .nav--offcanvas-2 {
   transition-property: all;
-  transition-duration: 0.3s;
+  transition-duration: 0.2s;
   transition-timing-function: linear;
   transition-delay: 0s;
   left: -300px;
@@ -332,4 +333,32 @@ body {
 }
 .page__content--offcanvas-2.js-opened {
   transform: scale(0.8) translateX(150px);
+}
+
+/* Demo #3: styles */
+.nav--offcanvas-3 {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  left: -300px;
+  /* opened styles */
+}
+.nav--offcanvas-3.js-opened {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  left: 0;
+}
+
+.page__content--offcanvas-3 {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  transform: rotateY(0deg) translateX(0);
+}
+.page__content--offcanvas-3.js-opened {
+  transform: translate3d(100px, 0, -600px) rotateY(-20deg);
 }
