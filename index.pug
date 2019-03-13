@@ -32,8 +32,8 @@ mixin nav-item (navLinkText, navLinkIcon)
   //content part
   .page__content
   
-    //open navigation button
-    .nav-open-btn
+    //open navigation button(!!!you don't need .js-hidden class here on your website)
+    .nav-open-btn.js-hidden
       .nav-open-btn__bar
       .nav-open-btn__bar
       .nav-open-btn__bar
@@ -53,7 +53,7 @@ mixin nav-item (navLinkText, navLinkIcon)
             i(class="material-icons") toc
             | Check Codepen Challenge
             
-      h2 Click the button to pick a demo
+      h2 Click the button to pick a demo and then on nav button to check the effect
             
       //demo buttons
       .demo-btns

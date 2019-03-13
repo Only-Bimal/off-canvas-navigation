@@ -230,6 +230,10 @@ body {
   height: 25px;
   overflow: hidden;
   cursor: pointer;
+  /* hidden styles, you don't need it */
+}
+.nav-open-btn.js-hidden {
+  display: none;
 }
 
 .nav-open-btn__bar {

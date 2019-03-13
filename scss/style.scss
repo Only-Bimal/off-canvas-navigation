@@ -313,6 +313,11 @@ $nav-open-btn-horz-offset: 30px;
  
   overflow: hidden;
   cursor: pointer;
+  
+  /* hidden styles, you don't need it */
+  &.js-hidden {
+    display: none;
+  }
 }
 
 .nav-open-btn__bar {
