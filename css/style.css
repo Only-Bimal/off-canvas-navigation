@@ -285,7 +285,7 @@ body {
 /* Demo #1: styles */
 .nav--offcanvas-1 {
   transition-property: all;
-  transition-duration: 0.3s;
+  transition-duration: 0.2s;
   transition-timing-function: linear;
   transition-delay: 0s;
   left: -300px;
@@ -297,7 +297,7 @@ body {
 
 .page__content--offcanvas-1 {
   transition-property: all;
-  transition-duration: 0.3s;
+  transition-duration: 0.2s;
   transition-timing-function: linear;
   transition-delay: 0s;
   left: 0;
@@ -404,5 +404,33 @@ body {
   /* opened styles */
 }
 .page__content--offcanvas-4.js-opened {
+  left: 300px;
+}
+
+/* Demo #5: styles */
+.nav--offcanvas-5 {
+  width: 50%;
+  opacity: 0;
+  visibility: hidden;
+}
+.nav--offcanvas-5.js-opened {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  width: 300px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.page__content--offcanvas-5 {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  left: 0;
+  /* opened styles */
+}
+.page__content--offcanvas-5.js-opened {
   left: 300px;
 }

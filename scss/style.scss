@@ -365,7 +365,7 @@ $nav-open-btn-horz-offset: 30px;
 $nav-list-offset-vert: 30px;
 
 .nav--offcanvas-1 {
-  @include transition-mix($duration: .3s);
+  @include transition-mix();
   
   left: (- $nav-width);
     
@@ -376,7 +376,7 @@ $nav-list-offset-vert: 30px;
 }
 
 .page__content--offcanvas-1 {
-  @include transition-mix($duration: .3s);
+  @include transition-mix();
   
   left: 0;
   
@@ -467,6 +467,34 @@ $nav-list-offset-vert: 30px;
 }
 
 .page__content--offcanvas-4 {
+  @include transition-mix();
+  
+  left: 0;
+  
+  /* opened styles */
+  &.js-opened {
+    left: $nav-width;
+  }
+}
+
+/* Demo #5: styles */
+.nav--offcanvas-5 {
+  width: 50%;
+  
+  opacity: 0;
+  visibility: hidden;
+  
+  &.js-opened {
+    @include transition-mix;
+    
+    width: $nav-width;
+    
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.page__content--offcanvas-5 {
   @include transition-mix();
   
   left: 0;
