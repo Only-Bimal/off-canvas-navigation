@@ -13,10 +13,6 @@ navOpenBtn.addEventListener('click', function() {
   nav.classList.add('js-opened');
   
   pageContent.classList.add('js-opened');
-  
-  navCloseBtn.classList.add('js-opened');
-  
-  navList.classList.add('js-opened');
 });
 
 navCloseBtn.addEventListener('click', function() {
@@ -25,10 +21,6 @@ navCloseBtn.addEventListener('click', function() {
   nav.classList.remove('js-opened');
   
   pageContent.classList.remove('js-opened');
-  
-  navCloseBtn.classList.remove('js-opened');
-  
-  navList.classList.remove('js-opened');
 });
 
 //DEMO CODE - !!!YOU DON'T NEED IT
@@ -37,8 +29,6 @@ var demoBtns = document.querySelectorAll('.demo-btn');
 //adding default demo classes
 nav.classList.add('nav--offcanvas-1');
 pageContent.classList.add('page__content--offcanvas-1');
-navCloseBtn.classList.add('nav__close--offcanvas-1');
-navList.classList.add('nav__list--offcanvas-1');
 
 //change demo on btn click
 demoBtns.forEach(function(el, ind) {
@@ -72,14 +62,6 @@ demoBtns.forEach(function(el, ind) {
     pageContent.classList.remove(pageContent.classList[1]);
     
     pageContent.classList.add('page__content--offcanvas-' + effClass);
-    
-    navCloseBtn.classList.remove(navCloseBtn.classList[1]);
-    
-    navCloseBtn.classList.add('nav__close--offcanvas-' + effClass);
-  
-    navList.classList.remove(navList.classList[1]);
-    
-    navList.classList.add('nav__list--offcanvas-' + effClass);
     
   });
   

@@ -131,6 +131,16 @@ body {
   position: relative;
 }
 
+.page {
+  min-height: 100vh;
+  background-color: rgba(28, 28, 28, 0.5);
+}
+
+.page__content {
+  min-height: 100vh;
+  background-color: #fff;
+}
+
 /* navigation styles */
 .nav {
   position: fixed;
@@ -286,6 +296,7 @@ body {
   transition-timing-function: linear;
   transition-delay: 0s;
   left: 0;
+  /* opened styles */
 }
 .page__content--offcanvas-1.js-opened {
   transition-property: all;
@@ -295,26 +306,30 @@ body {
   left: 300px;
 }
 
-.nav__close--offcanvas-1 {
+/* Demo #2: styles */
+.nav--offcanvas-2 {
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  left: -300px;
+  /* opened styles */
+}
+.nav--offcanvas-2.js-opened {
   transition-property: all;
   transition-duration: 0.2s;
   transition-timing-function: linear;
-  transition-delay: 0.2s;
-  opacity: 0;
-}
-.nav__close--offcanvas-1.js-opened {
-  opacity: 1;
+  transition-delay: 0s;
+  left: 0;
 }
 
-.nav__list--offcanvas-1 {
+.page__content--offcanvas-2 {
   transition-property: all;
   transition-duration: 0.2s;
-  transition-timing-function: cubic-bezier(0.06, 1.44, 0.5, 1.48);
-  transition-delay: 0.5s;
-  top: 30px;
-  opacity: 0;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  transform: scale(1) translateX(0);
 }
-.nav__list--offcanvas-1.js-opened {
-  top: 0;
-  opacity: 1;
+.page__content--offcanvas-2.js-opened {
+  transform: scale(0.8) translateX(150px);
 }

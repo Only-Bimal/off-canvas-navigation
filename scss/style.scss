@@ -187,6 +187,18 @@ body {
   position: relative;
 }
 
+.page {
+  min-height: 100vh;
+  
+  background-color: rgba($dark-theme-color, .5);
+}
+
+.page__content {
+  min-height: 100vh;
+  
+  background-color: $light-theme-color;
+}
+
 /* navigation styles */
 $nav-width: 300px;
 $nav-bg: $dark-theme-color;
@@ -366,32 +378,34 @@ $nav-list-offset-vert: 30px;
   
   left: 0;
   
+  /* opened styles */
   &.js-opened {
     @include transition-mix($duration: .3s);
     left: $nav-width;
   }
 }
 
-.nav__close--offcanvas-1 {
-  @include transition-mix($duration: .2s, $delay: .2s);
+/* Demo #2: styles */
+.nav--offcanvas-2 {
+  @include transition-mix($duration: .3s);
   
-  opacity: 0;
-  
+  left: (- $nav-width);
+    
+  /* opened styles */
   &.js-opened {
-    opacity: 1;
+    @include transition-mix();
+    
+    left: 0;  
   }
 }
 
-.nav__list--offcanvas-1 {
-  @include transition-mix($duration: .2s, $timing: cubic-bezier(0.06, 1.44, 0.5, 1.48), $delay: .5s);
+.page__content--offcanvas-2 {
+  @include transition-mix($duration: .2s);
   
-  top: $nav-list-offset-vert;
-  
-  opacity: 0;
+  transform: scale(1) translateX(0);
   
   &.js-opened {
-    top: 0;
-    
-    opacity: 1;
+    transform: scale(.8) translateX($nav-width / 2);
   }
+  
 }
