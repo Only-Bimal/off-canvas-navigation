@@ -199,8 +199,6 @@ $nav-item-offset-vert: 20px;
 $nav-icon-offset-horz: 10px;
 
 .nav {
-  display: none;
-  
   position: fixed;
   top: 0;
   left: 0;
@@ -214,10 +212,14 @@ $nav-icon-offset-horz: 10px;
   box-shadow: 4px 0 5px 0 rgba(0,0,0,0.14), 
               1px 0 10px 0 rgba(0,0,0,0.12), 
               2px 0 4px -1px rgba(0,0,0,0.3);
+  
+  z-index: 500;
 }
 
 /* nav list styles */
 .nav__list {
+  position: relative;
+  
   padding: 0;
   margin: $nav-list-offset-vert 0 0 0;
   
@@ -308,7 +310,7 @@ $nav-open-btn-horz-offset: 30px;
 
 .nav-open-btn {
   @include position-absolute($top: $nav-open-btn-vert-offset, $left: $nav-open-btn-horz-offset);
-  @include transition-mix();
+ @include transition-mix();
   
   width: 35px;
   height: 25px;
@@ -318,6 +320,8 @@ $nav-open-btn-horz-offset: 30px;
   
   //used to hide open btn when the nav is opened
   &.js-hidden {
+    @include transition-mix($duration: 0s);
+    
     opacity: 0;
     visibility: hidden;
   }
@@ -343,3 +347,51 @@ $nav-open-btn-horz-offset: 30px;
   }
 }
 
+/* Demo #1: styles */
+$nav-list-offset-vert: 30px;
+
+.nav--offcanvas-1 {
+  @include transition-mix($duration: .3s);
+  
+  left: (- $nav-width);
+    
+  /* opened styles */
+  &.js-opened {
+    left: 0;  
+  }
+}
+
+.page__content--offcanvas-1 {
+  @include transition-mix($duration: .3s);
+  
+  left: 0;
+  
+  &.js-opened {
+    @include transition-mix($duration: .3s);
+    left: $nav-width;
+  }
+}
+
+.nav__close--offcanvas-1 {
+  @include transition-mix($duration: .2s, $delay: .2s);
+  
+  opacity: 0;
+  
+  &.js-opened {
+    opacity: 1;
+  }
+}
+
+.nav__list--offcanvas-1 {
+  @include transition-mix($duration: .2s, $timing: cubic-bezier(0.06, 1.44, 0.5, 1.48), $delay: .5s);
+  
+  top: $nav-list-offset-vert;
+  
+  opacity: 0;
+  
+  &.js-opened {
+    top: 0;
+    
+    opacity: 1;
+  }
+}
