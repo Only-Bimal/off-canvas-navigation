@@ -93,26 +93,26 @@ h2 {
 .demo-btn:nth-child(5) {
   color: #FC448D;
 }
-.demo-btn:hover {
+.demo-btn:hover, .demo-btn.js-active {
   color: #fff;
 }
-.demo-btn:hover:nth-child(1) {
+.demo-btn:hover:nth-child(1), .demo-btn.js-active:nth-child(1) {
   background-color: #00BD9D;
   border-color: #00BD9D;
 }
-.demo-btn:hover:nth-child(2) {
+.demo-btn:hover:nth-child(2), .demo-btn.js-active:nth-child(2) {
   background-color: #832161;
   border-color: #832161;
 }
-.demo-btn:hover:nth-child(3) {
+.demo-btn:hover:nth-child(3), .demo-btn.js-active:nth-child(3) {
   background-color: #FE9000;
   border-color: #FE9000;
 }
-.demo-btn:hover:nth-child(4) {
+.demo-btn:hover:nth-child(4), .demo-btn.js-active:nth-child(4) {
   background-color: #D72638;
   border-color: #D72638;
 }
-.demo-btn:hover:nth-child(5) {
+.demo-btn:hover:nth-child(5), .demo-btn.js-active:nth-child(5) {
   background-color: #FC448D;
   border-color: #FC448D;
 }
@@ -230,10 +230,6 @@ body {
   height: 25px;
   overflow: hidden;
   cursor: pointer;
-  /* hidden styles, you don't need it */
-}
-.nav-open-btn.js-hidden {
-  display: none;
 }
 
 .nav-open-btn__bar {

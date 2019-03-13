@@ -141,7 +141,8 @@ h2 {
     color: $accent-theme-color5;
   }
   
-  &:hover {
+  &:hover,
+  &.js-active {
     color: $light-theme-color;
     
     &:nth-child(1) {
@@ -313,11 +314,6 @@ $nav-open-btn-horz-offset: 30px;
  
   overflow: hidden;
   cursor: pointer;
-  
-  /* hidden styles, you don't need it */
-  &.js-hidden {
-    display: none;
-  }
 }
 
 .nav-open-btn__bar {
