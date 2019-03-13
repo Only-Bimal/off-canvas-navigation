@@ -308,12 +308,19 @@ $nav-open-btn-horz-offset: 30px;
 
 .nav-open-btn {
   @include position-absolute($top: $nav-open-btn-vert-offset, $left: $nav-open-btn-horz-offset);
+  @include transition-mix();
   
   width: 35px;
   height: 25px;
  
   overflow: hidden;
   cursor: pointer;
+  
+  //used to hide open btn when the nav is opened
+  &.js-hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 .nav-open-btn__bar {

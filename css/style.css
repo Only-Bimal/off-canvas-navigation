@@ -226,10 +226,18 @@ body {
   position: absolute;
   top: 30px;
   left: 30px;
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
   width: 35px;
   height: 25px;
   overflow: hidden;
   cursor: pointer;
+}
+.nav-open-btn.js-hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .nav-open-btn__bar {

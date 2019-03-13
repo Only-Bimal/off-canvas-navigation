@@ -1,5 +1,17 @@
 //CODE TO USE ON YOUR WEBSITE - !!! YOU NEED IT
 
+//hide nav open btn when the nav is open
+var navOpenBtn = document.querySelector('.nav-open-btn');
+var navCloseBtn = document.querySelector('.nav__close');
+
+navOpenBtn.addEventListener('click', function() {
+  navOpenBtn.classList.add('js-hidden');
+});
+
+navcloseBtn.addEventListener('click', function() {
+  navOpenBtn.classList.remove('js-hidden');
+});
+
 //DEMO CODE - !!!YOU DON'T NEED IT
 var demoBtns = document.querySelectorAll('.demo-btn');
 var nav = document.querySelector('.nav');
